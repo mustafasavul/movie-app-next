@@ -1,9 +1,9 @@
+import Layout from "../layout/index";
+
 function Homepage() {
-    return (
-        <div>
-            Homepage
-        </div>
-    )
+    return <Layout headTitle={"Anasayfa"}>
+        <h1>Hello Welcome</h1>
+    </Layout>
 }
 
 export default Homepage;
