@@ -1,0 +1,30 @@
+{
+  "name": "appcent-movie-app",
+  "version": "1.0.0",
+  "description": "Appcent Movie App for Next.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mustafasavul/movie-app-next.git"
+  },
+  "keywords": [
+    "appcent",
+    "next",
+    "react",
+    "movie"
+  ],
+  "author": "Mustafa Savul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mustafasavul/movie-app-next/issues"
+  },
+  "homepage": "https://github.com/mustafasavul/movie-app-next#readme",
+  "dependencies": {
+    "next": "^12.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
