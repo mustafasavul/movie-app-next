@@ -1,4 +1,4 @@
-import Layout from "../../layout";
+import Layout from "../../components/layout";
 import unfetch from "isomorphic-unfetch";
 import slug from "slug";
 

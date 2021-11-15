@@ -1,8 +1,8 @@
 import Head from 'next/head';
-import Header from "../components/header";
-import Navigation from "../components/navigation";
-import Footer from "../components/footer";
-import Jumbotron from "../components/jumbotron";
+import Header from "./header";
+import Navigation from "./navigation";
+import Footer from "./footer";
+import Jumbotron from "./jumbotron";
 
 function Layout({children, headTitle}) {
     return <div>
