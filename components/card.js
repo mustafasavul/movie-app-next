@@ -3,7 +3,6 @@ import moment from "moment";
 function Card({title, popularity, date, overview, poster, altText}) {
     return (
         <article className="flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
-            <div className="w-2 bg-gray-800"/>
             <div
                 className="overflow-hidden rounded-xl relative transform hover:-translate-y-2 transition ease-in-out duration-500 shadow-lg hover:shadow-2xl movie-item text-white">
                 <div

@@ -16,6 +16,13 @@ function MovieDetail({movie}) {
             date={movie.release_date}
             summary={movie.overview}
             backdrop={movie.backdrop_path}
+            genres={movie.genres.map((genre) => {
+                return <li key={genre.id}>{genre.name},</li>
+            })}
+            productions={movie.production_companies[0].name}
+            status={movie.status}
+            tagline={movie.tagline}
+            imdb={movie.imdb_id}
         />
     </Layout>
 }
