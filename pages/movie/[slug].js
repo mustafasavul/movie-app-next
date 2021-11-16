@@ -4,7 +4,7 @@ import slug from "slug";
 
 const baseURL = 'https://api.themoviedb.org/3/';
 const apiKey = 'api_key=6b9aa903068d8a1efb9f84d8ca640133';
-const apiURL = baseURL + '{movie_id}?' + apiKey;
+const apiURL = baseURL + 'movie/popular?' + apiKey;
 
 function MovieDetail({movie}) {
     return <Layout>
@@ -13,7 +13,7 @@ function MovieDetail({movie}) {
         </div>
 
         <figure>
-            <img src={movie.poster_path} alt={movie.title}/>
+            <img src={`https://image.tmdb.org/t/p/w500/` + movie.poster_path} alt={movie.title}/>
         </figure>
     </Layout>
 }
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
     const movies = await data.json();
 
     const paths = movies.results.map(movie => {
-        return {params: {slug: `${slug(movie.title)}-${movie.id}`}}
+        return {params: {slug: `${movie.id}-${slug(movie.title)}`}}
     });
 
     return {
@@ -34,9 +34,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}) {
     // data fetch
-    const id = params.slug.split("-").slice(-1)[0];
+    const id = params.slug.split("-").slice(0,5)[0];
 
-    const data = await unfetch(apiURL + id)
+    console.log(id)
+
+    const data = await unfetch('https://api.themoviedb.org/3/movie/' + id + '?api_key=6b9aa903068d8a1efb9f84d8ca640133')
     const movie = await data.json();
 
     return {

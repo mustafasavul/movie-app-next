@@ -4,24 +4,26 @@ import unfetch from "isomorphic-unfetch";
 import slug from "slug";
 import Card from "../components/card";
 
+
 function Homepage({movies}) {
-    return <Layout headTitle={"Anasayfa"}>
+    return <Layout headTitle="Anasayfa">
         <h3 className="text-4xl m-5">Popular Movies</h3>
 
         <div className="grid grid-cols-3 gap-1 justify-between overflow-x-auto">
             {movies.results.map((movie) => (
                 <div key={movie.id}>
-                    <Link href="/movies/[slug]"
-                          as={`/movies/${slug(movie.title)}-${movie.id}`}>
-
-                        <Card
-                            title={movie.title}
-                            overview={movie.overview}
-                            popularity={movie.popularity}
-                            date={movie.release_date}
-                            poster={movie.poster_path}
-                            altText={movie.title}
-                        />
+                    <Link href="/movie/[slug]"
+                          as={`/movie/${movie.id}-${slug(movie.title)}`}>
+                        <a>
+                            <Card
+                                title={movie.title}
+                                overview={movie.overview}
+                                popularity={movie.popularity}
+                                date={movie.release_date}
+                                poster={movie.poster_path}
+                                altText={movie.title}
+                            />
+                        </a>
                     </Link>
                 </div>
             ))}

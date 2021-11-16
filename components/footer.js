@@ -7,7 +7,7 @@ function Footer() {
             <div className="xl:px-40 pb-12 lg:px-20 md:px-10 sm:px-5 px-10">
                 <div className="w-full pt-12 flex flex-col sm:flex-row space-y-2  justify-start">
                     <div className="w-full sm:w-2/5 pr-6 flex flex-col space-y-4">
-                        <Image src="/logo-white.svg" width="80" height="80"/>
+                        <Image src="/logo-white.svg" width="80" height="80" priority />
 
                         <address className="opacity-60">
                             Alya Life Residence Barış Sok. No: 1 Kat: 10
