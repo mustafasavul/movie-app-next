@@ -1,3 +1,5 @@
+import moment from "moment";
+
 function Card({title, popularity, date, overview, poster, altText}) {
     return (
         <article className="flex max-w-sm w-full bg-white shadow-md rounded-lg overflow-hidden mx-auto">
@@ -19,7 +21,7 @@ function Card({title, popularity, date, overview, poster, altText}) {
                                     <div className="text-sm text-gray-400">Popularity:</div>
                                 </div>
                                 <div className="flex flex-col">
-                                    <div className="release">{date}</div>
+                                    <div className="release">{moment(date).format("DD.MM.YYYY")}</div>
                                     <div className="text-sm text-gray-400">Release date:</div>
                                 </div>
                             </div>
