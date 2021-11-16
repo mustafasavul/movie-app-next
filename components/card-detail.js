@@ -17,24 +17,25 @@ function CardDetail({
     return (
         <article className="py-3 max-w-full">
             <div
-                className="relative bg-no-repeat bg-left-top bg-cover bg-white shadow-lg border-gray-100 border sm:rounded-3xl p-8 flex space-x-8 card-detail-bg"
+                className="relative bg-no-repeat bg-left-top bg-cover bg-white shadow-lg border-gray-100 border sm:rounded-3xl p-8 flex flex-col md:flex-row space-x-8 card-detail-bg"
                 style={{
                     backgroundImage: `url(https://image.tmdb.org/t/p/w500/${backdrop})`,
                 }}>
-                <div className="h-12 overflow-visible w-1/3 md:w-1/3">
+                <div className="h-full md:h-12 overflow-visible w-full md:w-1/3 mb-5 md:mb-0">
                     <img className="rounded-3xl shadow-lg"
                          src={`https://image.tmdb.org/t/p/w500/` + poster}
                          alt={title}/>
                 </div>
 
-                <div className="flex flex-col w-full space-y-4">
+                <div className="flex flex-col w-full space-y-2 md:space-y-4">
                     <div className="flex justify-between items-start">
                         <div>
-                            <div className="flex">
+                            <div className="flex items-center">
                                 <h2 className="text-2xl text-white font-bold mr-2">{title}</h2>
 
-                                <a href={`https://www.imdb.com/title/` + imdb} target="_blank">
-                                    <Image priority src="/imdb.svg" width="40" height="40"/>
+                                <a href={`https://www.imdb.com/title/` + imdb} target="_blank"
+                                   className="flex items-center">
+                                    <Image priority src="/imdb.svg" width="40" height="20"/>
                                 </a>
                             </div>
                             {tagline && <p className="text-gray-300">{tagline}</p>}

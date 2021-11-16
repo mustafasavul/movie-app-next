@@ -1,11 +1,10 @@
 import Head from 'next/head';
 import Header from "./header";
-import Navigation from "./navigation";
 import Footer from "./footer";
-import Jumbotron from "./jumbotron";
+import Navigation from "./navigation";
 
 function Layout({children, headTitle}) {
-    return <div>
+    return <div className="flex flex-col h-screen justify-between">
         <Head>
             <title>{headTitle}</title>
         </Head>
@@ -13,8 +12,6 @@ function Layout({children, headTitle}) {
         <Header>
             <Navigation/>
         </Header>
-
-        <Jumbotron title="World's Leading Movie App"/>
 
         <main className="container mx-auto py-5">
             {children}

@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.card-detail-bg {
-
-}
-
 .card-detail-bg > * {
     z-index: 1;
 }
@@ -20,4 +16,18 @@
     background: rgba(0, 0, 0, 0.7);
     border-radius: 1.5rem;
     z-index: 0;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.navigation a {
+    font-weight: bold;
+}
+
+.navigation a:not(:last-child) {
+    margin-right: 15px;
 }

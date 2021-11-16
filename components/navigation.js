@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 function Navigation() {
-    return <nav>
+    return <nav className="navigation">
         <Link href="/">
             <a>Homepage</a>
         </Link>
