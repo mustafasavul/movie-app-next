@@ -3,11 +3,11 @@ import Link from 'next/link'
 function Navigation() {
     return <nav className="navigation">
         <Link href="/">
-            <a>Homepage</a>
+            <a className="dark:text-white">Homepage</a>
         </Link>
 
         <Link href="/about">
-            <a>About</a>
+            <a className="dark:text-white">About</a>
         </Link>
     </nav>
 }
