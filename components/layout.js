@@ -13,7 +13,7 @@ function Layout({children, headTitle}) {
             <Navigation/>
         </Header>
 
-        <main className="container mx-auto py-5">
+        <main className="container mx-auto py-5 px-4 lg:px-0">
             {children}
         </main>
 

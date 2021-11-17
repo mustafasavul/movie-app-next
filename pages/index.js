@@ -9,7 +9,7 @@ function Homepage({movies}) {
     return <Layout headTitle="Anasayfa">
         <Jumbotron title="Rise of the Technolgy"/>
 
-        <h3 className="text-4xl m-5">Popular Movies</h3>
+        <h3 className="text-4xl m-5 dark:text-white">Popular Movies</h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 justify-between overflow-x-auto">
             {movies.results.map((movie) => (
