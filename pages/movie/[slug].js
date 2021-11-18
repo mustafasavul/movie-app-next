@@ -8,7 +8,8 @@ const apiKey = 'api_key=6b9aa903068d8a1efb9f84d8ca640133';
 const apiURL = baseURL + 'movie/popular?' + apiKey;
 
 function MovieDetail({movie}) {
-    return <Layout>
+    return <Layout
+        headTitle={movie.title}>
         <div className="xl:pb-80">
             <CardDetail
                 title={movie.title}
